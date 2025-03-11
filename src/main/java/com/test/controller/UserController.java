@@ -10,4 +10,8 @@ public class UserController {
     public String getUserName(){
         return "No record found";
     }
+    @GetMapping("/address")
+    public String getAddress(){
+        return "Address not found";
+    }
 }
