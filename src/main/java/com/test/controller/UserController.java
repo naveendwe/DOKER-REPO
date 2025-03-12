@@ -14,4 +14,8 @@ public class UserController {
     public String getAddress(){
         return "Address not found";
     }
+    @GetMapping("/marks")
+    public String getMarks(){
+        return "You obtained 73% out of 100%";
+    }
 }
