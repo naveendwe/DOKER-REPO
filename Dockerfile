@@ -12,5 +12,8 @@ COPY target/docker_devops.jar /app/
 # Set the working directory to /app
 WORKDIR /app
 
+# Expose port 80 (if Spring Boot uses it)
+EXPOSE 80
+
 # Run the Java application
 ENTRYPOINT ["java", "-jar", "docker_devops.jar"]
