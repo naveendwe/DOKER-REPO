@@ -31,7 +31,7 @@ jobs:
         run: mvn clean install  # Build JAR file
 
       - name: Build and push Docker image
-        uses: mr-smithers-exellent/docker-build-push@latest
+        uses: docker/build-push-action@v2
         with:
           image: naveen7224/spring_devops
           tag: latest
