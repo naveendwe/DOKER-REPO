@@ -12,5 +12,8 @@ COPY target/docker_devops.jar /app/
 # Set the working directory to /app
 WORKDIR /app
 
+# Expose the port the app runs on
+EXPOSE 8000
+
 # Run the Java application
 ENTRYPOINT ["java", "-jar", "docker_devops.jar"]
