@@ -54,4 +54,4 @@ jobs:
                 run: docker build -t docker_devops .
 
               - name: Run Container
-                run: docker run -d -p 80:8000 docker_devops
+                run: docker run -p 80:8000 docker_devops
