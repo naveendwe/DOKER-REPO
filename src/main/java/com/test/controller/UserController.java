@@ -18,4 +18,8 @@ public class UserController {
     public String getMarks(){
         return "You obtained 73% out of 100%";
     }
+    @GetMapping("/prom")
+    public String getPromot(){
+        return "You will get promotion in the next year";
+    }
 }
