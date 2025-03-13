@@ -8,7 +8,7 @@ public class UserController {
 
     @GetMapping("/user")
     public String getUserName(){
-        return "No record found";
+        return "Hello Docker now you are running fine :)";
     }
     @GetMapping("/address")
     public String getAddress(){
@@ -16,7 +16,7 @@ public class UserController {
     }
     @GetMapping("/marks")
     public String getMarks(){
-        return "You obtained 73% out of 100%";
+        return "You obtained 75% out of 100%";
     }
     @GetMapping("/update")
     public String getPromot(){

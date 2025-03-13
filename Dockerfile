@@ -1,20 +1,11 @@
-FROM openjdk:17
-
-# Set up a directory before copying the JAR file
+FROM maven:latest AS builder
 WORKDIR /app
-
-# Create the logs directory explicitly
+COPY . .
 RUN mkdir -p logs
+RUN mvn clean install
 
-RUN mvn package -DskipTests
-# Copy the JAR file to the /app directory (not logs, to avoid conflicts)
-COPY target/docker_devops.jar /app/
-
-# Set the working directory to /app
+FROM openjdk:17-jdk-slim
 WORKDIR /app
-
-# Expose the port the app runs on
+COPY --from=builder /app/target/docker_devops.jar .
 EXPOSE 8000
-
-# Run the Java application
 ENTRYPOINT ["java", "-jar", "docker_devops.jar"]
