@@ -20,6 +20,6 @@ public class UserController {
     }
     @GetMapping("/update")
     public String getPromot(){
-        return "You will get promotion in the next year with 2026";
+        return "You will get promotion in the next year with 2025";
     }
 }

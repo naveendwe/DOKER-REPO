@@ -6,6 +6,7 @@ WORKDIR /app
 # Create the logs directory explicitly
 RUN mkdir -p logs
 
+RUN mvn package -DskipTests
 # Copy the JAR file to the /app directory (not logs, to avoid conflicts)
 COPY target/docker_devops.jar /app/
 
