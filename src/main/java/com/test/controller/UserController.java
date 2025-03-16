@@ -22,4 +22,8 @@ public class UserController {
     public String getPromot(){
         return "You will get promotion in the next year with 2025";
     }
+    @GetMapping("/mobile")
+    public String getMobile(){
+        return "This service is under maintenance. Please try after 24 hours";
+    }
 }
