@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-    @GetMapping("/user")
+    @GetMapping("/check")
     public String getUserName(){
         return "Hello Docker now you are running fine :)";
     }
